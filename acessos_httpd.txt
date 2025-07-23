@@ -2,6 +2,6 @@ Talvez seja necessário aplicar chcon com o caminho absoluto:
  
 sudo chcon -t httpd_sys_rw_content_t /caminho/para/img -R
 ou usar restorecon após definir com semanage:
- 
+ sudo chcon -R -t httpd_sys_rw_content_t storage bootstrap/cache
 sudo semanage fcontext -a -t httpd_sys_rw_content_t "/caminho/para/img(/.*)?"
 sudo restorecon -Rv /caminho/para/img
