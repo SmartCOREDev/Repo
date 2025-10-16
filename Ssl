@@ -1,0 +1,5 @@
+para criar certificado 
+
+openssl req -nodes -new -x509 \
+  -keyout server.key -out server.crt \
+  -subj "/C=BR/ST=São Paulo/L=Campinas/O=MinhaEmpresa/OU=TI/CN=192.168.0.10/emailAddress=admin@meusite.com"
